@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="common/bootstrap-4.6.0/css/bootstrap.min.css">
+		<script src="common/js/jquery-3.5.1.min.js"></script>
+		<script src="common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+		<script src="common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+		<script>
+			const arr1 = ["a", "b", "c"];
+			console.log(arr1.length);
+			
+			for(var i=0; i<arr1.length; i++) {
+				console.log(arr1[i]);			
+			};
+			
+			var fruits = ["Banana", "Orange", "Apple", "Mango"];
+			fruits.push("Kiwi"); 
+			console.log(fruits);
+			
+			delete fruits[0]; 
+			console.log(fruits);
+			delete fruits[2]; 
+			console.log(fruits);
+			
+			console.log(fruits.length);
+			
+			var fruits = ["Banana", "Orange", "Apple", "Mango"];
+			fruits.splice(2, 0, "Kiwi");        /*  Removes the first element of fruits */
+			fruits.splice(2, 1, "Kiwi");        /*  대체의 효과 */
+			fruits.splice(2, 1);                /*  삭제의 효과 */
+			console.log(fruits);
+			
+			var myChildren = fruits.concat(arr1, "asdasdasd"); 
+			console.log(myChildren);
+			
+			
+			var stale = ["Emil", "Tobias", "Linus"];
+			var kai = ["Robin"];
+			var children = fruits.concat(stale, kai);
+			
+			
+			var arr2 = ["Emil", "Tobias", "Linus"];
+			
+			var myChildren = arr2.concat("Peter");
+			console.log(myChildren == arr2);
+			
+			
+			
+			// 정렬하기 
+			
+			var fruits = ["Banana", "Orange", "Apple", "Mango"];
+			fruits.sort(); // 올림차순
+			console.log(fruits);
+			
+			fruits.reverse();     // Then reverse the order of the elements
+			console.log(fruits);
+			
+			
+		</script>
+	</head>
+	<body>
+		<div class="card">
+			<div class="card-header">
+				배열 처리
+			</div>
+				
+				
+			<div class="card-body">
+				
+			</div>
+		</div>		
+	</body>
+</html>

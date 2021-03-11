@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="common/bootstrap-4.6.0/css/bootstrap.min.css">
+		<script src="common/js/jquery-3.5.1.min.js"></script>
+		<script src="common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+		<script src="common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+		<script>
+			const fun1 = () => {
+				/* console.log("코드1 실행");
+				setTimeout(function() { // 비동기작업
+					console.log("코드2 실행");
+					setTimeout(function() { // 또 비동기작업 : exam24이랑 비교해보면 exam24가 훨 나음을 알 수 있다.
+						console.log("코드3 실행")
+					}, 3000);
+				}, 3000); // 3초 뒤에 실행
+				console.log("코드4 실행"); */
+				
+				var promise = new Promise((resolve, reject) => {
+					console.log("시간을 요하는 작업...");
+					var result = true;
+					if(result) {
+						resolve(); // success callback;
+					} else {
+						reject(); // failure callback
+					} 
+				});
+					
+				promise
+					.then(() => {
+						console.log("작업이 성공되었을 때 실행");
+					})
+					.catch(() => console.log("작업이 실패되었을 때 실행"))
+					.finally(function() {
+						console.log("작업이 성공 또는 실패가 되었을때 마무리 작업 실행")
+					});
+					
+			};
+			
+			const callback1 = () => {
+				console.log("코드2 실행");
+			};
+			
+		</script>
+	</head>
+	<body>
+		<div class="card">
+			<div class="card-header">
+				비동기화
+			</div>	
+			<div class="card-body">
+				<button onclick="fun1()" class="btn btn-danger btn-sm">
+					함수 호출
+				</button>
+			</div>
+		</div>		
+	</body>
+</html>
