@@ -8,7 +8,7 @@
       <script src="/javascript/common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
       <script>
       	const handleClick1 = () => {
-      		$.ajax({url: "exam04_ajax1_data1.json"})
+      		$.ajax({url: "exam04_ajax1_data1.json", method:"post"})
       		.done((data) => {
       			const htmlFragment = `
       				<div>
@@ -34,7 +34,8 @@
       			`;
       			$("#content").html(htmlFragment);
       		})
-      		.fail((error) => {
+      		.catch((error) => {
+      			console.log("에러발생");
       			console.log(error);
       		})
       		.always(() => {
